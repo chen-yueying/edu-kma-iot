@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kma.iot.dao.model">
+
+	<class name="User" table="User">
+		<meta attribute="class-description">Mapping User class to table User</meta>
+		<id name="username" type="string" column="username"/>
+		<property name="password" type="string" column="password" not-null="true"/>
+		<property name="fullname" type="string" column="fullname" not-null="true"/>
+		<property name="phoneNumber" type="string" column="phoneNumber" not-null="true"/>
+		<property name="address" type="string" column="address" not-null="true"/>
+		<property name="email" type="string" column="email" not-null="true"/>
+		<property name="create_date" type="date" column="create_date" not-null="true"/>
+	</class>
+	
+	<class name="Sensor" table="Sensor_Device">
+		<meta attribute="class-description">Mapping User class to table Sensor_Device</meta>
+		<id name="mac_address" type="string" column="mac_address"/>
+		<property name="name" type="string" column="name" />
+		<property name="owner" type="string" column="owner" not-null="true"/>
+		<property name="status_time" type="string" column="status_time"/>
+		<property name="function" type="string" column="function"/>
+		<property name="value" type="string" column="value"/>
+		<property name="location" type="string" column="location"/>
+		<!-- many-to-one name="user" column="username" class="User" lazy="false" insert="false" update="false" not-null="true"/-->
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+[2018-11-26 23:26:26] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT
+[2018-11-26 23:34:41] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-11-26 23:42:21] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-11-26 23:43:13] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-11-26 23:46:42] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
