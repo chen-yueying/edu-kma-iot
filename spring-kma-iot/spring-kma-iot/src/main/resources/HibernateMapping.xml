@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.kma.iot.dao.model">
+
+	<class name="User" table="USER">
+		<meta attribute="class-description">Mapping User class to table USER</meta>
+		<id name="username" type="string" column="username"/>
+		<property name="password" type="string" column="password" not-null="true"/>
+		<property name="fullname" type="string" column="fullname" not-null="true"/>
+		<property name="address" type="string" column="address" />
+		<property name="email" type="string" column="email" not-null="true"/>
+		<property name="create_date" type="date" column="create_date" not-null="true"/>
+	</class>
+	
+	<class name="Device" table="DEVICE" >
+		<meta attribute="class-description">Mapping Device class to table DEVICE</meta>
+		<id name="mac_address" type="string" column="mac_address"/>
+		<property name="name" type="string" column="name" />
+		<property name="owner" type="string" column="owner" not-null="true"/>
+		<property name="location" type="string" column="location"/>
+		<many-to-one name="user"  column="username" class="User" lazy="false" insert="false" update="false" not-null="true"/>
+	</class>
+	
+	<class name="Sensor" table="SENSOR">
+		<meta attribute="class-description">Mapping Sensor class to table SENSOR</meta>
+		<id name="mac_address" type="string" column="mac_address"></id>
+		<property name="status_time" type="string" column="status_time"/>
+		<property name="value" type="string" column="value"/>
+		<!-- one-to-one name="device" foreign-key="mac_address" class="Device"/-->
+	</class>
+</hibernate-mapping>

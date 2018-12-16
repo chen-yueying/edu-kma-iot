@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.select-device{
+	background-color:#eeeeec;
+	 border: 1px solid #d9d9d9;
+	 color: #888a85!important";
+}
+.body{
+	background-color: #ffff;
+	box-shadow: 0 1px 2px #acacac;
+	margin-top:50px;
+	padding:20px
+}
+.btn-device{
+	border:none;
+	background-color:white;
+	color:#577ff4!important;
+	margin:0;
+}
+.btn-device:hover {
+	 color: #FF9900 !important;
+     background-color:white;
+}

@@ -1,0 +1,57 @@
+@import "/css/header.css";
+@import "/css/re-login.css";
+@import "/css/content.css";
+@import "/css/menu.css";
+@import "/css/body.css";
+body {
+	font:  20px Arial, Helvetica, sans-serif, SimSun;
+	line-height: 1.5;
+	font-size: 14px;
+	background-color: #fbfbfb;
+	font:20
+}
+
+.row{
+	margin-right:0;
+	margin-left:0;
+}
+.content{
+	background-color: #ffff;
+	border-left: 1px solid #ededed;
+	margin-top:30px;
+	 padding: 0px 50px 0px 15px;
+}
+.footer{
+	height:200px;
+	 background-color:#ffff;
+	 border-top:2px solid #f40;
+}
+
+a:hover{
+	 color: #FF9900;
+      background-color:white;
+      text-decoration: none;
+}
+a{
+	color:  #577ff4;
+    background-color:white;
+     text-decoration: none;
+}
+.body-content-menu{
+	background-color: #ffff;
+	margin-top: 80px;
+	min-height: 500px;
+}
+@media screen and (max-width: 767px) {
+
+	.re-login {
+		width: 300px;
+	}
+	.menu{
+	background-color: #ffff;
+	border:0px;
+	margin-top:30px;
+	 padding: 0px 5px 0px 5px;
+	}
+	
+}

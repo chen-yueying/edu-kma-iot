@@ -1,0 +1,3 @@
+[2018-12-14 21:29:46] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-14 21:33:31] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-14 21:34:09] INFO [http-nio-8080-exec-7] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@99ea3e9 by 01698749499<-----------------------
