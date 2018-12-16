@@ -1,13 +1,41 @@
 package edu.kma.iot.dao.model;
 
-public class User {
-	
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "USER", uniqueConstraints = {@UniqueConstraint(columnNames = "username")})
+public class User  {
+	@Id
+	@Pattern(regexp="^[0-9]{10,11}$")
+	@Column(name = "username", unique = true, nullable = true)
 	private String username;
+	
+	@Size(max = 35)
+	@NotBlank
+	@Column(name = "fullname")
 	private String fullname;
+	
+	@Pattern(regexp="[^\\s].{6,16}$")
+	@Column(name= "password", nullable = true)
 	private String password;
-	private String phone_number;
+	
+	
+	@Column(name = "address")
 	private String address;
+	
+	@Email(regexp= "\\S+")
+	@Column(name= "email")
 	private String email;
+	
+	@Column(name = "date_create")
 	private String create_date;
 	
 	public String getUsername() {
@@ -29,12 +57,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getPhoneNumber() {
-		return phone_number;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phone_number = phoneNumber;
-	}
 	public String getAddress() {
 		return address;
 	}
@@ -53,6 +75,5 @@ public class User {
 	public void setCreate_date(String create_date) {
 		this.create_date = create_date;
 	}
-	
 	
 }

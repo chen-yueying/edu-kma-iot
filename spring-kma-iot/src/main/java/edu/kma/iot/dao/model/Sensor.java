@@ -1,27 +1,21 @@
 package edu.kma.iot.dao.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="SENSOR")
 public class Sensor extends Device {
-	private String function;
-	private String value;
-	private String location;
+	@Column(name = "status_time")
+	private String status_time;
 	
-	public String getFunction() {
-		return function;
+	public String getStatus_time() {
+		return status_time;
 	}
-	public void setFunction(String function) {
-		this.function = function;
-	}
-	public String getValue() {
-		return value;
-	}
-	public void setValue(String value) {
-		this.value = value;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setStatus_time(String status_time) {
+		this.status_time = status_time;
 	}
 	
 }

@@ -18,7 +18,7 @@ import edu.kma.iot.dao.model.User;
 
 @Component("userAuthPro")
 public class UserAuthProvider implements AuthenticationProvider{
-	private static final Logger LOGGER = Logger.getLogger(UserAuthProvider.class);
+	private static final Logger LOG = Logger.getLogger(UserAuthProvider.class);
 	@Autowired
 	private UserDAO userDAO;
 	
@@ -27,7 +27,7 @@ public class UserAuthProvider implements AuthenticationProvider{
 		String username = authentication.getName().toString();
 		User user = userDAO.getUser(username);
 		if(user == null) return null;
-		LOGGER.info("--------------------- > Found " + user + " by " +username +"<-----------------------");
+		LOG.info("--------------------- > Found " + user + " by " +username +"<-----------------------");
 		if(!user.getPassword().equals(authentication.getCredentials())) return null;
 		return successful(username, authentication.getCredentials().toString());
 	}

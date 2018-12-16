@@ -1,11 +1,45 @@
 package edu.kma.iot.dao.model;
 
-public class Device {
-	private String mac_address;
-	private String name;
-	private String owner;
-	private String status_time;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
+@Entity
+@Table(name = "DEVICE", uniqueConstraints = {@UniqueConstraint(columnNames = "mac_address")})
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Device {
+	@Id
+	@Column(name = "mac_address", unique = true, nullable = true)
+	@Size(min=1,max=50)
+	private String mac_address;
+	
+	@Column(name = "name")
+	@Size(max=20)
+	private String name;
+	
+	@Column(name="owner", nullable = true, insertable = true, updatable = true)
+	private String owner;
+	
+	@Column(name="location")
+	@Size(min=1,max=35)
+	private String location;
+	
+	@NotBlank
+	@Column(name="type_code", insertable = false, updatable = false)
+	private String type_code;
+	
+	@ManyToOne
+	@JoinColumn(name = "type_code")
+	private ClassifyDevice classify;
+	
 	public String getMac_address() {
 		return mac_address;
 	}
@@ -29,13 +63,24 @@ public class Device {
 	public void setOwner(String owner) {
 		this.owner = owner;
 	}
-
-	public String getStatus_time() {
-		return status_time;
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public void setType_code(String type_code) {
+		this.type_code = type_code;
+	}
+	public String getType_code() {
+		return type_code;
 	}
 
-	public void setStatus_time(String status_time) {
-		this.status_time = status_time;
+	public ClassifyDevice getClassify() {
+		return classify;
 	}
 
+	public void setClassify(ClassifyDevice classify) {
+		this.classify = classify;
+	}
 }
