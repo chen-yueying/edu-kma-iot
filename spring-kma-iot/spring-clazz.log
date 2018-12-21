@@ -1,68 +1,62 @@
-[2018-12-16 16:11:35] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:12:04] INFO [http-nio-8080-exec-1] UserDAOimpl.Insert(45) | Insert user 01698749499 done!
-[2018-12-16 16:12:04] INFO [http-nio-8080-exec-1] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1297b626 by 01698749499<-----------------------
-[2018-12-16 16:13:07] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:13:34] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1506b94c by 01698749499<-----------------------
-[2018-12-16 16:18:25] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:18:40] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2135d6d5 by 01698749499<-----------------------
-[2018-12-16 16:23:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:23:44] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@20776e08 by 01698749499<-----------------------
-[2018-12-16 16:28:01] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:28:21] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@4ed6ebd9 by 01698749499<-----------------------
-[2018-12-16 16:41:16] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:42:01] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1dfff17a by 01698749499<-----------------------
-[2018-12-16 16:43:34] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:43:43] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@45720e0e by 01698749499<-----------------------
-[2018-12-16 16:45:21] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 16:45:44] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@e385e18 by 01698749499<-----------------------
-[2018-12-16 19:19:27] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:19:56] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@28f7a31b by 01698749499<-----------------------
-[2018-12-16 19:20:42] INFO [http-nio-8080-exec-9] DeviceDAOimpl.insert(42) | Insert device afff-gre-5434-feee-hkods done!
-[2018-12-16 19:28:38] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:29:53] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@55ef8f1c by 01698749499<-----------------------
-[2018-12-16 19:33:03] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:34:06] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@79cfe653 by 01698749499<-----------------------
-[2018-12-16 19:37:49] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:38:34] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:39:16] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 19:39:34] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1e66b0a6 by 01698749499<-----------------------
-[2018-12-16 19:40:36] INFO [http-nio-8080-exec-1] DeviceDAOimpl.insert(42) | Insert device afff-gre-5434-feee-hkodf done!
-[2018-12-16 21:59:31] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:00:38] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:00:57] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@33f74e8a by 01698749499<-----------------------
-[2018-12-16 22:08:53] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:09:29] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2ab46f0e by 01698749499<-----------------------
-[2018-12-16 22:14:18] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:14:39] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@166a5d50 by 01698749499<-----------------------
-[2018-12-16 22:15:24] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:15:58] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1e0bd92b by 01698749499<-----------------------
-[2018-12-16 22:29:39] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:30:28] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2dd741ed by 01698749499<-----------------------
-[2018-12-16 22:31:00] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:31:22] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@35653e73 by 01698749499<-----------------------
-[2018-12-16 22:32:13] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:33:04] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@7080226c by 01698749499<-----------------------
-[2018-12-16 22:43:36] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:43:51] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@18581ba3 by 01698749499<-----------------------
-[2018-12-16 22:54:40] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 22:57:46] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@35653e73 by 01698749499<-----------------------
-[2018-12-16 23:00:34] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:01:40] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@57d894ca by 01698749499<-----------------------
-[2018-12-16 23:06:59] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:08:31] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@5829e401 by 01698749499<-----------------------
-[2018-12-16 23:09:20] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:09:42] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@649bfed6 by 01698749499<-----------------------
-[2018-12-16 23:10:18] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:10:51] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@dcc41ee by 01698749499<-----------------------
-[2018-12-16 23:13:41] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:13:52] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@712aace4 by 01698749499<-----------------------
-[2018-12-16 23:18:52] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:19:13] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@649bfed6 by 01698749499<-----------------------
-[2018-12-16 23:21:48] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:21:59] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2210c1cd by 01698749499<-----------------------
-[2018-12-16 23:24:12] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:25:14] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@712aace4 by 01698749499<-----------------------
-[2018-12-16 23:27:39] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:27:46] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1561894e by 01698749499<-----------------------
-[2018-12-16 23:29:47] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
-[2018-12-16 23:32:23] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@c58210a by 01698749499<-----------------------
+[2018-12-21 12:51:13] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 13:09:04] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@5aa0211c by 01698749499<-----------------------
+[2018-12-21 14:23:00] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:23:15] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@661b1666 by 01698749499<-----------------------
+[2018-12-21 14:32:23] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:32:44] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@b78c1aa by 01698749499<-----------------------
+[2018-12-21 14:37:06] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:37:38] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@50013546 by 01698749499<-----------------------
+[2018-12-21 14:45:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:46:56] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@4bb2109c by 01698749499<-----------------------
+[2018-12-21 14:48:55] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:49:58] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@29062300 by 01698749499<-----------------------
+[2018-12-21 14:52:42] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:53:07] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@32bbeac3 by 01698749499<-----------------------
+[2018-12-21 14:54:25] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:56:42] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@17a7b9ac by 01698749499<-----------------------
+[2018-12-21 14:59:10] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 14:59:20] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@48aca472 by 01698749499<-----------------------
+[2018-12-21 15:01:31] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 15:01:58] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@52cf35e3 by 01698749499<-----------------------
+[2018-12-21 15:02:59] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 15:05:27] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2612eb5b by 01698749499<-----------------------
+[2018-12-21 15:12:39] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 15:14:13] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@61170224 by 01698749499<-----------------------
+[2018-12-21 15:20:03] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 15:21:18] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@61170224 by 01698749499<-----------------------
+[2018-12-21 15:26:27] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 15:27:06] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@53f246c by 01698749499<-----------------------
+[2018-12-21 17:11:17] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 17:11:59] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@32bbeac3 by 01698749499<-----------------------
+[2018-12-21 17:16:45] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 17:17:35] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@c03e2f4 by 01698749499<-----------------------
+[2018-12-21 17:46:45] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 17:47:36] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@390fdee5 by 01698749499<-----------------------
+[2018-12-21 18:02:08] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 18:02:34] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@3da3098d by 01698749499<-----------------------
+[2018-12-21 18:03:49] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 18:04:42] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@742aedb7 by 01698749499<-----------------------
+[2018-12-21 18:06:30] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 18:07:29] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@6877930d by 01698749499<-----------------------
+[2018-12-21 18:23:46] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 18:40:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 18:41:01] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1a33d436 by 01698749499<-----------------------
+[2018-12-21 19:26:09] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 19:26:26] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@6543387c by 01698749499<-----------------------
+[2018-12-21 19:32:44] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 19:34:38] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@442a1e53 by 01698749499<-----------------------
+[2018-12-21 19:35:00] INFO [http-nio-8080-exec-5] DeviceDAOimpl.insert(42) | Insert device afff-gre-5434-feee-hkodsk done!
+[2018-12-21 19:44:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 19:45:14] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@60f85529 by 01698749499<-----------------------
+[2018-12-21 19:47:07] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 19:47:47] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2ac676f8 by 01698749499<-----------------------
+[2018-12-21 19:55:57] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 19:56:14] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1469f0c0 by 01698749499<-----------------------
+[2018-12-21 23:02:07] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 23:02:39] INFO [http-nio-8080-exec-6] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@631ce845 by 01698749499<-----------------------
+[2018-12-21 23:10:12] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 23:10:37] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2b171893 by 01698749499<-----------------------
+[2018-12-21 23:14:12] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 23:15:08] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@534c1587 by 01698749499<-----------------------
+[2018-12-21 23:16:56] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-21 23:17:16] INFO [http-nio-8080-exec-3] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1986dc4 by 01698749499<-----------------------

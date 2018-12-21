@@ -37,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.failureUrl("/login?error=1");
 		http.logout().logoutUrl("/logout").logoutSuccessUrl("/").deleteCookies("JSESSIONID");
 		http.sessionManagement().maximumSessions(5).expiredUrl("/login");
+		http.rememberMe().tokenValiditySeconds(3600*24).rememberMeParameter("remember-me");
 	}
 	
 	@Override

@@ -1,5 +1,6 @@
 package edu.kma.iot.dao.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -8,9 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @Entity
 @Table(name = "CLASSIFY_DEVICE", uniqueConstraints = {@UniqueConstraint(columnNames="type_code")})
-public class ClassifyDevice {
+@JsonPropertyOrder({ "type_code", "type_name"})
+public class ClassifyDevice implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "type_code")
 	private String type_code;
@@ -19,6 +27,7 @@ public class ClassifyDevice {
 	private String type_name;
 	
 	@OneToMany(mappedBy = "classify")
+	 @JsonBackReference
 	private List<Device> devices;
 	
 	public String getType_code() {

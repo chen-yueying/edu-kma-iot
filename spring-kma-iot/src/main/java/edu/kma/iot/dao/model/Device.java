@@ -1,5 +1,7 @@
 package edu.kma.iot.dao.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,10 +14,16 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 @Entity
 @Table(name = "DEVICE", uniqueConstraints = {@UniqueConstraint(columnNames = "mac_address")})
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Device {
+@JsonPropertyOrder({ "mac_address", "name",  "owner", "location"})
+public class Device implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "mac_address", unique = true, nullable = true)
 	@Size(min=1,max=50)
@@ -33,11 +41,11 @@ public class Device {
 	private String location;
 	
 	@NotBlank
-	@Column(name="type_code", insertable = false, updatable = false)
+	@Column(name="type_code")
 	private String type_code;
 	
 	@ManyToOne
-	@JoinColumn(name = "type_code")
+	@JoinColumn(name = "type_code", insertable = false, updatable = false)
 	private ClassifyDevice classify;
 	
 	public String getMac_address() {
@@ -72,6 +80,7 @@ public class Device {
 	public void setType_code(String type_code) {
 		this.type_code = type_code;
 	}
+	@JsonBackReference
 	public String getType_code() {
 		return type_code;
 	}
@@ -83,4 +92,5 @@ public class Device {
 	public void setClassify(ClassifyDevice classify) {
 		this.classify = classify;
 	}
+
 }

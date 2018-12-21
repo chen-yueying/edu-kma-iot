@@ -60,13 +60,20 @@ public class DeviceDAOimpl implements DeviceDAO {
 			String hql;
 			if (owner == null) {
 				hql = "from Device";
-			}else {
-				hql = "from Device where owner=:owner ";
+				Query<Device> query = session.createQuery(hql);
+				session.beginTransaction().commit();
+				return query.list();
 			}
+			hql = "from Device where owner=:owner ";
 			Query<Device> query = session.createQuery(hql);
 			query.setParameter("owner", owner);
 			session.beginTransaction().commit();
 			return query.list();
 		}
+	}
+
+	@Override
+	public void delete(String mac_address) {
+
 	}
 }

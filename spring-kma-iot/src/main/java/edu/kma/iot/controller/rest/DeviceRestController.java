@@ -1,5 +1,6 @@
 package edu.kma.iot.controller.rest;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,14 @@ public class DeviceRestController {
 	@Autowired
 	private DeviceDAO deviceDAO;
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping("/list")
-	public List<Device> listAll() {
-		return deviceDAO.list(null);
+	public List<Device> listAll(Principal principal) {
+		return deviceDAO.list(principal.getName().toString());
+	}
+	
+	public void addDevice() {
+		
 	}
 	
 }

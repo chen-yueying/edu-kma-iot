@@ -9,4 +9,5 @@ public interface DeviceDAO {
 	public void update(Device device);
 	public Device get(String mac_address);
 	public List list(String owner);
+	public void delete(String mac_address);
 }

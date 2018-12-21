@@ -14,10 +14,10 @@
 						<tr>
 							<th><b>Quản lý thiết bị</b></th>
 							<th><select class="select-device" name="type_code" id="type_code" onchange="listDevice()">
-										<option value="details">Tất cả</option>
 									<c:forEach items="${classifies}" var="classify" varStatus="loop">
 										<option value="${classify.type_code}">${classify.type_name}</option>
 									</c:forEach>
+									<option value="details">Tất cả</option>
 							</select></th>
 							<script type="text/javascript">
 									function listDevice(){
@@ -28,22 +28,25 @@
 										}
 							</script>
 							<th></th>
+							<th></th>
 							<th><a href="/device/add">Thêm</a></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr class="active">
-							<th class="table-bordered">MAC ID</th>
-							<th class="table-bordered">Loại</th>
+							<th class="table-bordered">Tên</th>
 							<th class="table-bordered">Vị trí</th>
+							<th class="table-bordered">Nhiệt độ - độ ẩm</th>
+							<th class="table-bordered">Cập nhập</th>
 							<th class="table-bordered"></th>
 						</tr>
-						<c:forEach items="${devices}" var="device" varStatus="loop">
+						<c:forEach items="${sensors}" var="sensor" varStatus="loop">
 							<tr>
-								<td class="table-bordered">${device.mac_address}</td>
-								<td class="table-bordered">${device.classify.type_name}</td>
-								<td class="table-bordered">${device.location}</td>
-								<td class="table-bordered"><a href="/device/${device.classify.type_code}/get-${device.mac_address}">chi tiết</a></td>
+								<td class="table-bordered">${sensor.name}</td>
+								<td class="table-bordered">${sensor.location}</td>
+								<td class="table-bordered">${sensor.temperature_value} -  ${sensor.moisture_value}</td>
+								<td class="table-bordered">${sensor.status_time}</td>
+								<td class="table-bordered"><a href="/device/${sensor.classify.type_code}/get-${sensor.mac_address}">chi tiết</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

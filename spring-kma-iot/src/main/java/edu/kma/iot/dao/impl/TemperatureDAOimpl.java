@@ -18,7 +18,7 @@ import edu.kma.iot.dao.model.Device;
 import edu.kma.iot.dao.model.SensorTemperature;
 
 @Component("temperatureDAO")
-public class TemperatureDAOimpl implements DeviceDAO {
+public class TemperatureDAOimpl implements DeviceDAO{
 	private static final Logger LOG = Logger.getLogger(TemperatureDAOimpl.class);
 	private LocalSessionFactoryBean sessionFactory;
 
@@ -27,42 +27,36 @@ public class TemperatureDAOimpl implements DeviceDAO {
 	public void setSessionFatory(LocalSessionFactoryBean sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
 	@Override
 	public void insert(Device device) {
+		SensorTemperature sensor = (SensorTemperature) device;
 		Session session = sessionFactory.getObject().openSession();
-		session.save(device);
+		session.save(sensor);
 		session.beginTransaction().commit();
 		session.close();
-		LOG.info("Insert SensorTemperator " + device.getMac_address() + " done!");
+		LOG.info("Insert SensorTemperator " + sensor.getMac_address() + " done!");
 	}
 
 	@Override
-	public Device get(String mac_address) {
+	public SensorTemperature get(String mac_address) {
 		try (Session session = sessionFactory.getObject().openSession()) {
 			SensorTemperature temperature = session.get(SensorTemperature.class, mac_address);
-			return temperature;
+			return  temperature;
 		}
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
 	public void update(Device device) {
-		SensorTemperature sen = (SensorTemperature) device;
+		SensorTemperature sensor = (SensorTemperature) device;
 		Session session = sessionFactory.getObject().openSession();
 		Transaction tran = session.beginTransaction();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("ss:mm:hh dd/MM/yyy");
-		String hql = "update SensorTemperature set temperature_value=:temperature," + "moisture_value=:moisture,"
-				+ "status_time=:status," + "where mac_address=:mac";
-		Query<SensorTemperature> query = session.createQuery(hql);
-		query.setParameter("temperature", sen.getTemperature_value());
-		query.setParameter("moisture", sen.getMoisture_value());
-		query.setParameter("status_time", dateFormat.format(new Date()));
-		query.setParameter("mac_address", sen.getMac_address());
-		query.executeUpdate();
+		SensorTemperature sen = (SensorTemperature) session.merge(sensor);
+		sen.setStatus_time(dateFormat.format(new Date()));
+		session.save(sen);
 		tran.commit();
 		session.close();
-		LOG.info("update SensorTemperature " + sen.getMac_address() + " done!");
+		LOG.info("update SensorTemperature " + sensor.getMac_address() + " done!");
 	}
 
 	@Override
@@ -71,8 +65,19 @@ public class TemperatureDAOimpl implements DeviceDAO {
 		try (Session session = sessionFactory.getObject().openSession()) {
 			String hql = "from SensorTemperature where owner=:owner";
 			Query query = session.createQuery(hql);
+			query.setParameter("owner", owner);
 			return (List<SensorTemperature>) query.list();
 		}
+	}
+
+	@Override
+	public void delete(String mac_address) {
+		Session session = sessionFactory.getObject().openSession();
+		Transaction tran = session.beginTransaction();
+		SensorTemperature tem = session.get(SensorTemperature.class, mac_address);
+		session.delete(tem);
+		tran.commit();
+		session.close();
 	}
 
 }
