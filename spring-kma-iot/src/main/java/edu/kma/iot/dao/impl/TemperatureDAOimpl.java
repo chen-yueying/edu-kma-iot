@@ -35,12 +35,12 @@ public class TemperatureDAOimpl implements DeviceDAO{
 		Session session = sessionFactory.getObject().openSession();
 		Transaction tran = session.beginTransaction();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("ss:mm:hh dd/MM/yyy");
-		String sql = " insert into SENSOR_TEMPERATURE (mac_address, status_time, temperature_value, moisture_value)"
-				+ " values (:mac, :time, :temp, :mois) ";
+		String sql = " insert into SENSOR_TEMPERATURE (mac_address, status_time, temperature_value, humidity_value)"
+				+ " values (:mac, :time, :temp, :humidity) ";
 		Query query = session.createNativeQuery(sql);
 		query.setParameter("mac", sensor.getMac_address());
 		query.setParameter("temp", sensor.getTemperature_value());
-		query.setParameter("mois", sensor.getHumidity_value());
+		query.setParameter("humidity", sensor.getHumidity_value());
 		query.setParameter("time", dateFormat.format(new Date()));
 		query.executeUpdate();
 		tran.commit();

@@ -21,9 +21,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @Table(name = "DEVICE", uniqueConstraints = {@UniqueConstraint(columnNames = "mac_address")})
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonPropertyOrder({ "mac_address", "name",  "owner", "location"})
-public class Device implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class Device {
 	@Id
 	@Column(name = "mac_address", unique = true, nullable = true)
 	@Size(min=1,max=50)

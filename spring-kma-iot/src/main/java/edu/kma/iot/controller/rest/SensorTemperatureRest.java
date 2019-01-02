@@ -11,7 +11,7 @@ import edu.kma.iot.dao.DeviceDAO;
 import edu.kma.iot.dao.model.SensorTemperature;
 
 @RestController
-@RequestMapping("/device/rest/cbnd")
+@RequestMapping("/rest/cbnd")
 public class SensorTemperatureRest {
 	
 	@Autowired
@@ -23,13 +23,16 @@ public class SensorTemperatureRest {
 		return sen;
 	}
 	
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	@RequestMapping(value = "/save", method = RequestMethod.POST)//arduino send to localhost:8080/rest/cbnd/save   -> JSON
 	public void save(@RequestBody SensorTemperature sensor) {
+		System.out.println("=================================================");
 		if(temperatureDAO.get(sensor.getMac_address()) == null) {
 			temperatureDAO.insert(sensor);
 		}else {
 			temperatureDAO.update(sensor);
 		}
 	}
+	
+	
 
 }
