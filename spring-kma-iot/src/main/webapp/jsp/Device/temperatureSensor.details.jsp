@@ -33,7 +33,7 @@
 							</tr>	
 							<tr>
 								<th>Độ ẩm:</th>
-								<td>${sensor.moisture_value}</td>
+								<td>${sensor.humidity_value}</td>
 							</tr>
 							<tr>
 								<th>Thời gian cập nhập:</th>

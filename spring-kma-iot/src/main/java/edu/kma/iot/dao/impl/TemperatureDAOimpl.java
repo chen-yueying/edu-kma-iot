@@ -7,7 +7,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -41,7 +40,7 @@ public class TemperatureDAOimpl implements DeviceDAO{
 		Query query = session.createNativeQuery(sql);
 		query.setParameter("mac", sensor.getMac_address());
 		query.setParameter("temp", sensor.getTemperature_value());
-		query.setParameter("mois", sensor.getMoisture_value());
+		query.setParameter("mois", sensor.getHumidity_value());
 		query.setParameter("time", dateFormat.format(new Date()));
 		query.executeUpdate();
 		tran.commit();
@@ -77,7 +76,7 @@ public class TemperatureDAOimpl implements DeviceDAO{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("ss:mm:hh dd/MM/yyy");
 		SensorTemperature sensor = (SensorTemperature) session.merge(sen);
 		sensor.setTemperature_value(sen.getTemperature_value());
-		sensor.setMoisture_value(sen.getMoisture_value());
+		sensor.setHumidity_value(sen.getHumidity_value());
 		sen.setStatus_time(dateFormat.format(new Date()));
 		session.save(sensor);
 		tran.commit();

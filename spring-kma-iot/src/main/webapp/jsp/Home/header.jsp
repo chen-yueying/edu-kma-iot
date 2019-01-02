@@ -12,8 +12,7 @@
 					class="icon-bar" style="background-color: #828282;"></span> <span
 					class="icon-bar" style="background-color: #828282;"></span>
 			</button>
-			<a class="navbar-brand" style="color: #6633CC !important;" href="/"><i
-				class="fa fa-telegram" style="font-size: 20px; color: #FF7519;"></i>Fsmart</a>
+			<a class="navbar-brand" style="color: #6633CC !important;" href="/">FSMART</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-left nav-left">
@@ -22,11 +21,11 @@
 				<li><a href="/">HƯỚNG DẪN</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<sec:authorize access="!hasAnyRole('ROLE_USER')">
+				<sec:authorize access="!hasAnyRole('ROLE_USER','ROLE_ADMIN')">
 					<li><a href="/login">Đăng nhập</a></li>
 					<li><a href="/register">Đăng ký</a></li>
 				</sec:authorize>
-				<sec:authorize access="hasAnyRole('ROLE_USER')">
+				<sec:authorize access="hasAnyRole('ROLE_USER','ROLE_ADMIN')">
 					<li><a href="/acount/details"><i class="fa fa-user-o"
 							style="font-size: 17px;"></i>
 							${pageContext.request.userPrincipal.name}</a></li>

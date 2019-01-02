@@ -28,8 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/").permitAll();
 		http.authorizeRequests().antMatchers("/login").permitAll();
-		http.authorizeRequests().antMatchers("/acount/**").access("hasRole('ROLE_USER')");
-		http.authorizeRequests().antMatchers("/device/**").access("hasRole('ROLE_USER')");
+		http.authorizeRequests().antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')");
+		http.authorizeRequests().antMatchers("/acount/**","/device/**").access("hasAnyRole('ROLE_USER,ROLE_ADMIN')");
 		http.formLogin().loginPage("/login")
 		.usernameParameter("username").passwordParameter("password")
 		.loginProcessingUrl("/check_sec")
@@ -53,6 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/css/**");
+		web.ignoring().antMatchers("/js/**");
 	}
 	
 }

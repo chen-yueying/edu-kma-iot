@@ -18,7 +18,7 @@
 	<div class="menu1">
 			<ul class="list-group">
 				<li class="list-group-item"><a href="">Cửa hàng</a></li>
-				<sec:authorize access="hasRole('ROLE_USER')">
+				<sec:authorize access="hasAnyRole('ROLE_USER','ROLE_ADMIN')">
 					<li class="list-group-item"><a href="/acount/details">Người
 							dùng</a></li>
 					<li class="list-group-item"><a href="/device/details">Quản

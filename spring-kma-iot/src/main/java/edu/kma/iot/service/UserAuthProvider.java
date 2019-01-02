@@ -29,12 +29,12 @@ public class UserAuthProvider implements AuthenticationProvider{
 		if(user == null) return null;
 		LOG.info("--------------------- > Found " + user + " by " +username +"<-----------------------");
 		if(!user.getPassword().equals(authentication.getCredentials())) return null;
-		return successful(username, authentication.getCredentials().toString());
+		return successful(username, authentication.getCredentials().toString(), user.getROLE());
 	}
 
-	private Authentication successful(String username, String password) {
+	private Authentication successful(String username, String password, String role) {
 		List<GrantedAuthority> grantedAuths = new ArrayList<>();
-		grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+		grantedAuths.add(new SimpleGrantedAuthority(role));
 		return new UsernamePasswordAuthenticationToken(username, password, grantedAuths);
 	}
 

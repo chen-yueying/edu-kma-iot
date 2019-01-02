@@ -17,7 +17,7 @@ public class SensorTemperature extends Device implements Serializable {
 	@Column(name = "temperature_value")
 	private float temperature_value;
 	@Column(name = "moisture_value")
-	private float moisture_value;
+	private float humidity_value;
 	@Column(name = "status_time")
 	private String status_time;
 	
@@ -36,12 +36,11 @@ public class SensorTemperature extends Device implements Serializable {
 		this.temperature_value = temperature_value;
 	}
 
-	public float getMoisture_value() {
-		return moisture_value;
+	public void setHumidity_value(float humidity_value) {
+		this.humidity_value = humidity_value;
 	}
-
-	public void setMoisture_value(float moisture_value) {
-		this.moisture_value = moisture_value;
+	public float getHumidity_value() {
+		return humidity_value;
 	}
 	
 

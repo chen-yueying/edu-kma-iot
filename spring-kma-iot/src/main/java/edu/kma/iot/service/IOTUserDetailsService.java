@@ -24,7 +24,7 @@ public class IOTUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException("User not authorized.");
 		}
 		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		authorities.add(new SimpleGrantedAuthority(user.getROLE()));
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), true, true, true, true, authorities);
 	}
 

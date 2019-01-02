@@ -1,0 +1,11 @@
+[2018-12-28 15:00:58] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-28 15:01:21] INFO [http-nio-8080-exec-2] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@1eab87bf by 01698749499<-----------------------
+[2018-12-28 15:04:48] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-28 15:05:05] INFO [http-nio-8080-exec-4] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2b171893 by 01698749499<-----------------------
+[2018-12-28 15:18:01] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-28 15:31:59] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-28 15:32:49] INFO [http-nio-8080-exec-6] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@2549ba6 by 01698749499<-----------------------
+[2018-12-28 19:03:24] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2018-12-28 19:03:41] INFO [http-nio-8080-exec-7] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@441f19c8 by 0398749499<-----------------------
+[2018-12-28 19:04:13] INFO [http-nio-8080-exec-1] DeviceDAOimpl.insert(42) | Insert device afff-gre-5434-feee-hkodstt done!
+[2018-12-28 19:04:23] INFO [http-nio-8080-exec-6] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@609c8a0d by 01698749499<-----------------------

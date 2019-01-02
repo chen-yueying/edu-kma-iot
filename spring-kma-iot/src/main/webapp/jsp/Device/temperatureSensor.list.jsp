@@ -44,7 +44,7 @@
 							<tr>
 								<td class="table-bordered">${sensor.name}</td>
 								<td class="table-bordered">${sensor.location}</td>
-								<td class="table-bordered">${sensor.temperature_value} -  ${sensor.moisture_value}</td>
+								<td class="table-bordered">${sensor.temperature_value} -  ${sensor.humidity_value}</td>
 								<td class="table-bordered">${sensor.status_time}</td>
 								<td class="table-bordered"><a href="/device/${sensor.classify.type_code}/get-${sensor.mac_address}">chi tiết</a></td>
 							</tr>

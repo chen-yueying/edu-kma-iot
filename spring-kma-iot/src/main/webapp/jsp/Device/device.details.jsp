@@ -19,14 +19,6 @@
 										<option value="${classify.type_code}">${classify.type_name}</option>
 									</c:forEach>
 							</select></th>
-							<script type="text/javascript">
-									function listDevice(){
-												var selected = document.getElementById('type_code').value;
-												var path = "/device/" + selected;
-												console.log(path);
-												window.location.href = path;
-										}
-							</script>
 							<th></th>
 							<th><a href="/device/add">Thêm</a></th>
 						</tr>

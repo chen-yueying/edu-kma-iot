@@ -2,7 +2,6 @@ package edu.kma.iot.dao.impl;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -15,7 +14,6 @@ import edu.kma.iot.dao.ClassifyDeviceDAO;
 import edu.kma.iot.dao.model.ClassifyDevice;
 @Component("classifyDAO")
 public class ClassifyDAOimpl  implements ClassifyDeviceDAO{
-	private static final Logger LOG = Logger.getLogger(ClassifyDAOimpl.class);
 	private LocalSessionFactoryBean sessionFactory;
 	@Autowired
 	@Qualifier("sessionFactory")

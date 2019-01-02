@@ -38,6 +38,9 @@ public class User  {
 	@Column(name = "date_create")
 	private String create_date;
 	
+	@Column(name = "role")
+	private  String ROLE = "ROLE_USER";
+	
 	public String getUsername() {
 		return username;
 	}
@@ -75,5 +78,7 @@ public class User  {
 	public void setCreate_date(String create_date) {
 		this.create_date = create_date;
 	}
-	
+	public String getROLE() {
+		return ROLE;
+	}
 }
