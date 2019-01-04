@@ -1,5 +1,7 @@
 package edu.kma.iot.dao.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -9,8 +11,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @Entity
 @Table(name = "SENSOR_TEMPERATURE",  uniqueConstraints = {@UniqueConstraint(columnNames = "mac_address")})
-@JsonPropertyOrder({"mac_address", "temperature_value", "humidity_value", "status_time"})
-public class SensorTemperature extends Device{
+public class SensorTemperature extends Device implements Serializable{
 	@Column(name = "temperature_value")
 	private float temperature_value;
 	@Column(name = "humidity_value")

@@ -11,7 +11,7 @@ import edu.kma.iot.dao.DeviceDAO;
 import edu.kma.iot.dao.model.Device;
 
 @RestController
-@RequestMapping("/device/rest")
+@RequestMapping("/rest/device")
 public class DeviceRestController {
 	@Autowired
 	private DeviceDAO deviceDAO;
@@ -19,6 +19,7 @@ public class DeviceRestController {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/list")
 	public List<Device> listAll(Principal principal) {
+		if(principal == null) return deviceDAO.list(null);
 		return deviceDAO.list(principal.getName().toString());
 	}
 	

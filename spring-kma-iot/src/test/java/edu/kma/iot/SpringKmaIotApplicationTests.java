@@ -1,16 +1,50 @@
 package edu.kma.iot;
 
+import java.util.List;
+
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.json.JSONObject;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.client.RestTemplate;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+import edu.kma.iot.controller.rest.DeviceRestController;
+import edu.kma.iot.controller.rest.SensorTemperatureRest;
+import edu.kma.iot.dao.model.Device;
+import edu.kma.iot.dao.model.SensorTemperature;
+
+@RunWith(SpringJUnit4ClassRunner.class)
 public class SpringKmaIotApplicationTests {
+	private RestTemplate restTemplate;
+
+	@Before
+	public void setUp() {
+		HttpClientBuilder builder = HttpClientBuilder.create();
+		CloseableHttpClient httpClient = builder.build();
+		restTemplate = new RestTemplate(new HttpComponentsClientHttpRequestFactory(httpClient));
+	}
 
 	@Test
 	public void contextLoads() {
+		String address = "http://localhost:8080/rest/cbnd/save";
+//		ResponseEntity<List> entity = restTemplate.getForEntity(address, List.class);
+		//List devices = (List<Device>) entity.getBody();
+		
+		SensorTemperature sensor = new SensorTemperature();
+		sensor.setMac_address("afff-gre-5434-feee-hkods");
+		sensor.setHumidity_value(50);
+		sensor.setTemperature_value(40);
+		sensor.setLocation("nhà vệ sinh");
+		sensor.setType_code("cbnd");
+		sensor.setName("cảm biến 1");
+		sensor.setOwner("0398749499");
+		ResponseEntity<JSONObject> insertEntity = restTemplate.postForEntity(address, sensor, JSONObject.class);
 	}
 
 }
