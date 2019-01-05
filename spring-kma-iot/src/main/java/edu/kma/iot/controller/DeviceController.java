@@ -19,6 +19,7 @@ import edu.kma.iot.dao.ClassifyDeviceDAO;
 import edu.kma.iot.dao.DeviceDAO;
 import edu.kma.iot.dao.model.ClassifyDevice;
 import edu.kma.iot.dao.model.Device;
+import edu.kma.iot.dao.model.SensorTemperature;
 
 @Controller
 @RequestMapping("/device")
@@ -52,8 +53,7 @@ public class DeviceController {
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public ModelAndView save(@Valid @ModelAttribute("device-info") Device device, BindingResult result, Principal principal) {
-		device.setOwner(principal.getName());
+	public ModelAndView save(@Valid @ModelAttribute("device-info") Device device, BindingResult result) {
 		if(result.hasErrors()) {
 			ModelAndView mv = addDevice("Xảy ra lỗi!");
 			mv.addObject("errors", result);
@@ -61,8 +61,8 @@ public class DeviceController {
 			return mv;
 		}
 		if(deviceDAO.get(device.getMac_address()) != null) return addDevice("Thiết bị đã tồn tại, không thể tạo mới!");
-		deviceDAO.insert(device);
-		ModelAndView mv = devices(principal, "Thêm thành công!");
+		ModelAndView mv = new ModelAndView("forward:/device/" + device.getType_code() + "/save");
+		mv.addObject("device-info",device);
 		return mv;
 	}
 }

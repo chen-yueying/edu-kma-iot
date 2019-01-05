@@ -40,5 +40,11 @@ public class SensorTemperature extends Device implements Serializable{
 	public float getHumidity_value() {
 		return humidity_value;
 	}
-
+	@Override
+	public String toString() {
+		return "SensorTemperature [getTemperature_value()=" + getTemperature_value() + ", getHumidity_value()="
+				+ getHumidity_value() + ", getMac_address()=" + getMac_address() + "]";
+	}
+	
+	
 }

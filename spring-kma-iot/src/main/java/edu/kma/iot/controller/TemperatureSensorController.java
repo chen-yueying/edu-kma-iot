@@ -3,12 +3,15 @@ package edu.kma.iot.controller;
 import java.security.Principal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.kma.iot.dao.ClassifyDeviceDAO;
 import edu.kma.iot.dao.DeviceDAO;
+import edu.kma.iot.dao.model.Device;
 import edu.kma.iot.dao.model.SensorTemperature;
 
 @Controller
@@ -47,4 +50,12 @@ public class TemperatureSensorController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public ModelAndView save(@ModelAttribute("device-info") Device sensor, Principal principal) {
+		sensor.setOwner(principal.getName());
+		temperatureDAO.insert(sensor);
+		ModelAndView mv = new ModelAndView("redirect:/device/details");
+		mv.addObject("message", "Thêm thành công!");
+		return mv;
+	}
 }

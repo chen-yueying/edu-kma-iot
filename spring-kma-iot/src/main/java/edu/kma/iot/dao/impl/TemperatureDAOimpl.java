@@ -29,41 +29,26 @@ public class TemperatureDAOimpl implements DeviceDAO{
 	}
 	
 	@Override
-	@SuppressWarnings("rawtypes")
 	public void insert(Device device) {
-		SensorTemperature sensor = (SensorTemperature) device;
+		System.out.println("============");
+		SensorTemperature sensor = new SensorTemperature();
 		Session session = sessionFactory.getObject().openSession();
-		Transaction tran = session.beginTransaction();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("ss:mm:hh dd/MM/yyy");
-		String sql = " insert into SENSOR_TEMPERATURE (mac_address, status_time, temperature_value, humidity_value)"
-				+ " values (:mac, :time, :temp, :humidity) ";
-		Query query = session.createNativeQuery(sql);
-		query.setParameter("mac", sensor.getMac_address());
-		query.setParameter("temp", sensor.getTemperature_value());
-		query.setParameter("humidity", sensor.getHumidity_value());
-		query.setParameter("time", dateFormat.format(new Date()));
-		query.executeUpdate();
-		tran.commit();
+		sensor.setMac_address(device.getMac_address());
+		sensor.setOwner(device.getOwner());
+		sensor.setName(device.getName());
+		sensor.setLocation(device.getLocation());
+		sensor.setClassify(device.getClassify());
+		sensor.setType_code(device.getType_code());
+		session.save(sensor);
+		session.beginTransaction().commit();
 		session.close();
 		LOG.info("Insert SensorTemperator " + sensor.getMac_address() + " done!");
 	}
 	
 	@Override
-	@SuppressWarnings("rawtypes")
 	public SensorTemperature get(String mac_address) {
 		try (Session session = sessionFactory.getObject().openSession()) {
-			Transaction tran = session.beginTransaction();
 			SensorTemperature temperature = session.get(SensorTemperature.class, mac_address);
-			if(temperature == null) {
-				String sql = "insert into SENSOR_TEMPERATURE (mac_address) values (:mac)";
-				Query query = session.createNativeQuery(sql);
-				query.setParameter("mac", mac_address);
-				query.executeUpdate();
-				temperature = session.get(SensorTemperature.class, mac_address);
-				session.flush();
-				tran.commit();
-				LOG.info("Insert SensorTemperator " + mac_address + " done!");
-			}
 			return  temperature;
 		}
 	}

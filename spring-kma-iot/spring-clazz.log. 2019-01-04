@@ -1,0 +1,36 @@
+[2019-01-04 00:02:42] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:05:15] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:06:42] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:08:58] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:09:53] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:12:23] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:14:38] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:15:13] INFO [http-nio-8080-exec-5] UserAuthProvider.authenticate(30) | --------------------- > Found edu.kma.iot.dao.model.User@76cd528d by 0398749499<-----------------------
+[2019-01-04 00:15:34] INFO [http-nio-8080-exec-10] UserDAOimpl.update(79) | Update User 0398749499
+[2019-01-04 00:16:34] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:18:08] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:20:45] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:24:41] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:26:07] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 00:31:36] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 09:42:06] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:10:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:18:23] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:21:10] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:23:56] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:39:41] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:42:22] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:44:45] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:54:34] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 10:59:00] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:01:10] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:02:26] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:06:25] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:07:46] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:12:50] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:16:13] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:23:21] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:27:05] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:39:28] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:42:54] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
+[2019-01-04 11:45:58] INFO [main] ContextStartEventHandler.onApplicationEvent(11) | WELCOME TO KMA IOT!
