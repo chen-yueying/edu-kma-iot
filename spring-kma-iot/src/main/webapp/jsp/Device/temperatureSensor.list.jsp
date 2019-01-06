@@ -19,14 +19,6 @@
 									</c:forEach>
 									<option value="details">Tất cả</option>
 							</select></th>
-							<script type="text/javascript">
-									function listDevice(){
-												var selected = document.getElementById('type_code').value;
-												var path = "/device/" + selected;
-												console.log(path);
-												window.location.href = path;
-										}
-							</script>
 							<th></th>
 							<th></th>
 							<th><a href="/device/add">Thêm</a></th>
@@ -42,7 +34,6 @@
 						</tr>
 						<c:forEach items="${sensors}" var="sensor" varStatus="loop">
 							<tr>
-								<td class="table-bordered">${sensor.name}</td>
 								<td class="table-bordered">${sensor.location}</td>
 								<td class="table-bordered">${sensor.temperature_value} -  ${sensor.humidity_value}</td>
 								<td class="table-bordered">${sensor.status_time}</td>

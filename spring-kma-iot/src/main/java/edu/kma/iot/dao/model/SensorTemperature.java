@@ -17,7 +17,7 @@ public class SensorTemperature extends Device implements Serializable{
 	@Column(name = "humidity_value")
 	private float humidity_value;
 	@Column(name = "status_time")
-	private String status_time;
+	private String status_time = "chưa cập nhập";
 	
 	public String getStatus_time() {
 		return status_time;

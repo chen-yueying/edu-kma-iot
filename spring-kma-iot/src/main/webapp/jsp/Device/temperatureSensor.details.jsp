@@ -14,10 +14,11 @@
 								<th style="color: red">${message}</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody  >
+							<script>connect_cbnd();</script>
 							<tr class="active">
 								<th>MAC ID:</th>
-								<td><b>${sensor.mac_address}</b></td>
+								<td id="cbnd-mac" ><b>${sensor.mac_address}</b></td>
 							</tr>
 							<tr>
 								<th>Tên:</th>
@@ -29,19 +30,19 @@
 							</tr>
 							<tr>
 								<th>Nhiệt độ:</th>
-								<td>${sensor.temperature_value}</td>
+								<td id="cbnd-temperature">${sensor.temperature_value}</td>
 							</tr>	
 							<tr>
-								<th>Độ ẩm:</th>
-								<td>${sensor.humidity_value}</td>
+								<th >Độ ẩm:</th>
+								<td id="cbnd-humidity">${sensor.humidity_value}</td>
 							</tr>
 							<tr>
 								<th>Thời gian cập nhập:</th>
-								<td>${sensor.status_time}</td>
+								<td id="cbnd-status">${sensor.status_time}</td>
 							</tr>		
 							<tr>
 								<td><a href="/device/details">Quay lại</a></td>
-								<td><a href="/device/${device.type_code}/delete/${device.mac_address}">Xóa</a></td>
+								<td><a href="/device/${sensor.type_code}/delete/${sensor.mac_address}">Xóa</a></td>
 							</tr>
 						</tbody>
 					</table>
