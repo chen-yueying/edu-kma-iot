@@ -11,7 +11,7 @@ import edu.kma.iot.dao.DeviceDAO;
 import edu.kma.iot.dao.model.Device;
 
 @RestController
-@RequestMapping("/rest/device")
+@RequestMapping("/api/device")
 public class DeviceRestController {
 	@Autowired
 	private DeviceDAO deviceDAO;

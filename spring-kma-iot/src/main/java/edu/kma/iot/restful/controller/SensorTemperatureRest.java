@@ -18,7 +18,7 @@ import edu.kma.iot.dao.DeviceDAO;
 import edu.kma.iot.dao.model.SensorTemperature;
 
 @RestController
-@RequestMapping("/rest/device/cbnd")
+@RequestMapping("/api/cbnd")
 public class SensorTemperatureRest {
 
 	@Autowired
