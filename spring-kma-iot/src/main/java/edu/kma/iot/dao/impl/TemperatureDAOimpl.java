@@ -58,11 +58,11 @@ public class TemperatureDAOimpl implements DeviceDAO{
 		SensorTemperature sen = (SensorTemperature) device;
 		Session session = sessionFactory.getObject().openSession();
 		Transaction tran = session.beginTransaction();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("ss:mm:hh dd/MM/yyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss dd/MM/yyy");
 		SensorTemperature sensor = (SensorTemperature) session.merge(sen);
 		sensor.setTemperature_value(sen.getTemperature_value());
 		sensor.setHumidity_value(sen.getHumidity_value());
-		sen.setStatus_time(dateFormat.format(new Date()));
+		sensor.setStatus_time(dateFormat.format(new Date()).toString());
 		session.save(sensor);
 		tran.commit();
 		session.close();

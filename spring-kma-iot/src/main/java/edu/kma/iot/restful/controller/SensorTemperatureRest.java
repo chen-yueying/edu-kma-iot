@@ -1,4 +1,4 @@
-package edu.kma.iot.controller.rest;
+package edu.kma.iot.restful.controller;
 
 import javax.xml.ws.RequestWrapper;
 

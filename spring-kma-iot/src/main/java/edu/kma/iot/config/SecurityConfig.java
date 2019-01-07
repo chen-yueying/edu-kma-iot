@@ -37,6 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.logout().logoutUrl("/logout").logoutSuccessUrl("/").deleteCookies("JSESSIONID");
 		http.sessionManagement().maximumSessions(5).expiredUrl("/login");
 		http.rememberMe().tokenValiditySeconds(3600*24).rememberMeParameter("remember-me");
+		
+		http.cors().and().csrf().disable();
 	}
 	
 	@Override
@@ -54,5 +56,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		web.ignoring().antMatchers("/css/**");
 		web.ignoring().antMatchers("/js/**");
 	}
+	
 	
 }

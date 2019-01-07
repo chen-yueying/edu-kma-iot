@@ -14,10 +14,10 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-import edu.kma.iot.controller.rest.DeviceRestController;
-import edu.kma.iot.controller.rest.SensorTemperatureRest;
 import edu.kma.iot.dao.model.Device;
 import edu.kma.iot.dao.model.SensorTemperature;
+import edu.kma.iot.restful.controller.DeviceRestController;
+import edu.kma.iot.restful.controller.SensorTemperatureRest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class SpringKmaIotApplicationTests {
@@ -32,7 +32,7 @@ public class SpringKmaIotApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		String address = "http://localhost:8080/rest/cbnd/save";
+		String address = "http://localhost:8080/rest/device/cbnd/save";
 //		ResponseEntity<List> entity = restTemplate.getForEntity(address, List.class);
 		//List devices = (List<Device>) entity.getBody();
 		
@@ -44,7 +44,7 @@ public class SpringKmaIotApplicationTests {
 		sensor.setType_code("cbnd");
 		sensor.setName("cảm biến 1");
 		sensor.setOwner("0398749499");
-		ResponseEntity<JSONObject> insertEntity = restTemplate.postForEntity(address, sensor, JSONObject.class);
+		ResponseEntity<String> insertEntity = restTemplate.postForEntity(address, sensor, String.class);
 	}
 
 }

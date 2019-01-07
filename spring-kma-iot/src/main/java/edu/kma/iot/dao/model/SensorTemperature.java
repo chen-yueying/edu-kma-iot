@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
 @Entity
 @Table(name = "SENSOR_TEMPERATURE",  uniqueConstraints = {@UniqueConstraint(columnNames = "mac_address")})
 public class SensorTemperature extends Device implements Serializable{
@@ -17,7 +15,7 @@ public class SensorTemperature extends Device implements Serializable{
 	@Column(name = "humidity_value")
 	private float humidity_value;
 	@Column(name = "status_time")
-	private String status_time = "chưa cập nhập";
+	private String status_time = "chưa cập nhập!";
 	
 	public String getStatus_time() {
 		return status_time;
@@ -40,11 +38,5 @@ public class SensorTemperature extends Device implements Serializable{
 	public float getHumidity_value() {
 		return humidity_value;
 	}
-	@Override
-	public String toString() {
-		return "SensorTemperature [getTemperature_value()=" + getTemperature_value() + ", getHumidity_value()="
-				+ getHumidity_value() + ", getMac_address()=" + getMac_address() + "]";
-	}
-	
 	
 }
